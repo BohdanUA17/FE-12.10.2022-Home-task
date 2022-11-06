@@ -1,0 +1,36 @@
+*{
+	/*text-align: center;*/
+	margin: 0 0 0 0;
+}
+.banner__btn{
+	background: blue;
+	display: block;
+	margin: 20px 0;
+	border: none;
+	padding: 20px 20px;
+	text-transform: uppercase;
+	margin-left: 50px;
+	border-radius: 10px;
+}
+.banner__btn a{
+	color: white;
+	text-decoration: none;
+}
+.put__smth{
+	margin-left: 50px;
+}
+h1{
+	margin-left: 180px;
+}
+p{
+	margin-left: 50px;
+}
+div{
+	width: 20px;
+	height: 20px;
+}
+div > input{
+	width: 400px;
+	height: 25px;
+	border: 1px solid black;
+}
