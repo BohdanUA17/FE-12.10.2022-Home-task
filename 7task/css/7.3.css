@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.menu{
+	width: 300px;
+	height: 330px;
+	background: rgb(123, 104, 238);
+	justify-content: space-around;
+}
+button{
+	width: 270px;
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin:5px 15px;
+	text-align:center;
+	padding: 0 10px;
+	background:rgb(25, 25, 112);
+	border:1px solid ;
+	border-radius:10px;
+}
+button:hover {
+	background:rgb(72, 61, 139);
+}
+a{
+	color:rgb(135, 206, 235);
+	text-decoration:none;
+}
+span{
+	color:rgb(173, 216, 230);
+}
