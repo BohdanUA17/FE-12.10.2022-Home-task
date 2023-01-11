@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// 1. Среди трех чисел найти среднее арифметическое. Если среди чисел есть равные, вывести сообщение "Ошибка". Числа принять от пользователя.
+
+		let a = +prompt('Введите число');
+		console.log(a);
+		let b = +prompt('Введите число');
+		console.log(b);
+		let c = +prompt('Введите число');
+		console.log(c);
+		let d = a + b +c;
+
+		if ( a === b || b === c || a === c ) {
+        	alert("Ошибка");
+        	document.write( 'Перезагрузите страницу и попробуйте еще раз' );
+    	} 
+    	else {
+    		let result = ( a + b + c) / 3;
+    		alert(`Среднее число равно ${result}`);
+    	}
+
+
+		
+
+		// 3. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран.
+
+		var a = +prompt('Введите число');
+		console.log(a);
+		var b = +prompt('Введите число');
+		console.log(b);
+		var c = +prompt('Введите число');
+		console.log(c);
+
+		if (a > b &&a > c) {
+			alert( 'максимальное число ' +a);
+		} 
+		
+		if (a < b &&b > c) {
+			alert( 'максимальное число ' +b);
+		}
+
+		if (c > b &&a < c) {
+			alert( 'максимальное число ' +c);
+		}
+		
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
