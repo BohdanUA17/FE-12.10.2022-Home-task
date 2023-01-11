@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 750px;
+	height: 500px;
+	margin:120px auto;
+	padding: 15px;
+	font-size: 20px;
+	border: 1px solid blue;
+}
+.main__text {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.name {
+	width: 20%;
+}
+.form__item {
+	height: 25px;
+	border: 1px solid blue;
+}
+.topic {
+	border: 1px solid blue;
+	width: 19%;
+}
+.text__area {
+	border: 1px solid blue;
+}
+#text {
+	align-items: start;
+}
+.captcha > img {
+	width: 200px;
+	margin: 0 15px;
+}
+#captcha > a {
+	color: black;
+	margin-left: 10px;
+}
+.button {
+	width: 150px;
+	height: 30px;
+}
