@@ -1,0 +1,67 @@
+﻿     <!DOCTYPE html>
+     <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+      <title></title>
+     <!--3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.  
+        4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+           После выполнения функции — вывести информацию о сотрудниках. -->
+           <script>
+             const emploiesArr = [];
+             const empoleeSum = prompt('Кількість співробітників');
+             let personObj = {};
+             for(i=0;i<empoleeSum;i++){
+              personObj.name = prompt('name?');
+              personObj.secName = prompt('secName?');
+              personObj.age = prompt('age?');
+              personObj.occupation = prompt('occupation?');
+              emploiesArr.push(personObj);
+            }
+            personObj.showInfo = function(){
+              document.write(`Name - ${this.name} <br> secName - ${this.secName} <br> Age - ${this.age} <br> 
+                occupation - ${this.occupation}`)
+            } 
+            for(i=0;i<emploiesArr.length;i++){
+              emploiesArr[i].showInfo()
+            }
+
+            function assignSalary(arr) {
+              for (var i = 0; i < arr.length; i++) {
+                switch (arr[i].occupation) {
+                  case "director":
+                  arr[i].salary = 3000;
+                  break;
+                  case "manager":
+                  arr[i].salary = 1500;
+                  break;
+                  case "programmer":
+                  arr[i].salary = 2000;
+                  break;
+                  default:
+                  arr[i].salary = 1000;
+                }
+              }
+            }
+
+            assignSalary(emploiesArr);
+
+            for (var i = 0; i < emploiesArr.length; i++) {
+              console.log("Name: " + emploiesArr[i].name);
+              console.log("Second name: " + emploiesArr[i].secName);
+              console.log("Age: " + emploiesArr[i].age );
+              console.log("Occupation: " + emploiesArr[i].occupation);
+              console.log("Salary: " + emploiesArr[i].salary);
+            }
+
+          </script>
+        </head>
+        <body>
+        </body>
+        </html>
