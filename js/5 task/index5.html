@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<input type="text" id="input">
+		<button class="getEL" id="getEl">Додати елемент</button><br/>
+		<select id="select">
+			<option value="nickname1" selected="selected" id="newSelect">nickname1</option>
+			<option value="nickname2" id="newSelect">nickname2</option>
+			<option value="nickname3" id="newSelect">nickname3</option>
+		</select><br/>
+		<button onclick="getFirst()" id="first__el">Перший елемент</button>
+		<button onclick="getNext()" id="next__el">Наступний елемент</button>
+		<button onclick="getPrev()" id="previous__el">Попередній елемент</button>
+		<button onclick="getLast()" id="last__el">Останній елемент</button>
+	</div>
+	<script>
+		const input = document.getElementById('input');
+		const select = document.getElementById('select');
+		const first__el = document.getElementById('first__el');
+		const last__el = document.getElementById('last__el');
+		const next__el = document.getElementById('next__el');
+		const previous__el = document.getElementById('previous__el');
+		const getEL = document.getElementById('getEL');
+
+		getEl.addEventListener('click',function(){
+			const option = document.createElement('option');
+			option.innerText = input.value;
+			select.appendChild(option);
+			input.value = '';
+		})
+
+		function getFirst() {
+			select.selectedIndex = 0;
+		}
+		function getPrev() {
+			if (select.selectedIndex !== 0) {
+				select.selectedIndex--;
+			}
+		}
+		function getNext() {
+			if (select.selectedIndex !== select.length - 1) {
+				select.selectedIndex++;
+			}
+		}
+		function getLast() {
+			select.selectedIndex = select.length - 1;
+		}
+
+	</script>
+</body>
+</html>
