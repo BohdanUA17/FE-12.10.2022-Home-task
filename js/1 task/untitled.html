@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// 1. По координатам двух точек, которые вводит пользователь, определить уравнение прямой, проходящей через эти точки.
+		//   Общий вид уравнения: y = kx + b; где k = (y1 - y2) / (x1 - x2), b = y2 - k*x2.
+		var x1 = +prompt('x1?');
+		var y1 = +prompt('y1?');
+		var x2 = +prompt('x2?');
+		var y2 = +prompt('y2?');
+
+		var k = (y1 - y2) / (x1 - x2);
+		var b = y2 - k*x2;
+
+		document.write(` y=${k}x+${b} `);
+		
+
+		// 2. Обменять значения двух переменных, используя третью (буферную) переменную.
+		var a = 1;
+		var b = 2;
+		var c = a;
+		var a = b;
+		var b = a;
+
+		document.write(a,b,c);
+
+		// 3. Объявите две переменные: admin и name. Запишите в name строку "Василий". Замените значение из name в admin. Выведите admin.
+		let admin, name;
+		// var question  = prompt ('name?');
+		name = 'Василий';
+		admin = name;
+		alert (admin);
+		console.log('admin');
+
+		// 4. Получить от пользователя данные о пользователе: имя, фамилию, возраст. Обработать их и вывести на экран.
+		var question = prompt('name?');
+		console.log(question);
+		document.write("Your name is " + question);
+
+		var secondName = prompt('secondName?');
+		console.log(secondName);
+		document.write("Your second name is " + secondName);
+		
+
+		var age = +prompt ('age?');
+		console.log(age);
+		document.write("You are " + age);
+
+		// 5. Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно с информацией true или false.
+		var	a = answer;
+
+		var answer = prompt('Ваш возраст?');
+		var question = confirm('Ваш возраст ' + answer + ' лет?');
+
+		console.log(question);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
